@@ -1,0 +1,17 @@
+ <div class="img-add">
+  <%  @gallerys.each do |gallery| %>
+  <div class="gallery-img">
+  <%= image_tag(gallery.image.url)%>
+  </div>
+  <% end %>
+  </div>
+  <%= form_for @gallery,url: { controller: :gallerys, action: :create } do |f|%>
+   <label class="image-label" for="gallery_image">
+   <img class="camera" src="assets/5466.png">
+   <%= f.file_field :image, class: "none" %>
+   </label>
+   <div class="submit-form">
+   <%= f.submit value: '投稿する', id: "submit"%>
+   </div>
+  <% end %>
+  <%# <%= paginate @gallerys %>

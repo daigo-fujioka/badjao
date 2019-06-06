@@ -1,0 +1,1 @@
+json.image @gallery.image_url
