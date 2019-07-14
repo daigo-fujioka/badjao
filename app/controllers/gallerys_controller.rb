@@ -7,10 +7,7 @@ class GallerysController < ApplicationController
  end
  def create
     @gallery = Gallery.create(gallery_params)
-    respond_to do |format|
-      format.html {redirect_to action: "index"}
-      format.json
-    end
+
  end
  private
  def gallery_params
